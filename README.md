@@ -1,6 +1,6 @@
 # Nuxt Version of Vue-vben-admin
 
-Look at the [Vue Vben Admin](https://github.com/vbenjs/vue-vben-admin/tree/092b28d621d096949f7ef876794c23faa31802fe) to learn more.
+Look at the [Vue Vben Admin](https://github.com/vbenjs/vue-vben-admin) to learn more.
 
 ## Install and use
 
@@ -18,14 +18,12 @@ cd vben-nuxt
 npm install
 ```
 
-- run
-
+**Install components**
+- This project is using vue-vben-admin as core components. I'm using the original files so I do not include some components in this project. Go to vben-nuxt folder and get the components by this method:
 ```bash
-npm run dev
-```
-
-- build
-
-```bash
-npm run build
+git clone -n --depth=1 --filter=tree:0 https://github.com/vbenjs/vue-vben-admin
+cd vue-vben-admin
+git config core.sparseCheckout true
+echo "/packages/" >> .git/info/sparse-checkout
+git checkout
 ```
