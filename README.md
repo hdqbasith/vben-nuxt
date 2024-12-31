@@ -1,75 +1,31 @@
-# Nuxt Minimal Starter
+# Nuxt Version of Vue-vben-admin
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Look at the [Vue Vben Admin](https://github.com/vbenjs/vue-vben-admin/tree/092b28d621d096949f7ef876794c23faa31802fe) to learn more.
 
-## Setup
+## Install and use
 
-Make sure to install dependencies:
+- Get the project code
 
 ```bash
-# npm
+git clone https://github.com/hdqbasith/vben-nuxt.git
+```
+
+- Installation dependencies
+
+```bash
+cd vben-nuxt
+
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+- run
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+- build
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
