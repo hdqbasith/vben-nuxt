@@ -3,7 +3,7 @@ import type { Arrayable, MaybeElementRef } from '@vueuse/core';
 import { computed, onUnmounted, ref, watch } from 'vue';
 import type { Ref } from 'vue';
 
-import { isFunction } from '@vben/utils';
+import { isFunction } from '~/packages/utils';
 
 import { useMouseInElement } from '@vueuse/core';
 

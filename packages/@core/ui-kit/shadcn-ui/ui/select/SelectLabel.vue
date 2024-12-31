@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 import { SelectLabel, type SelectLabelProps } from 'radix-vue';
 

@@ -2,8 +2,8 @@ import type { SetupVxeTable } from './types';
 
 import { defineComponent, watch } from 'vue';
 
-import { usePreferences } from '@vben/preferences';
-import { useVbenForm } from '@vben-core/form-ui';
+import { usePreferences } from '~/packages/preferences';
+import { useVbenForm } from '~/packages/@core/ui-kit/form-ui';
 
 import {
   VxeButton,

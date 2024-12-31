@@ -5,8 +5,8 @@ export * from './ellipsis-text';
 export * from './icon-picker';
 export * from './page';
 export * from './resize';
-export * from '@vben-core/form-ui';
-export * from '@vben-core/popup-ui';
+export * from '~/packages/@core/ui-kit/form-ui';
+export * from '~/packages/@core/ui-kit/popup-ui';
 
 // 给文档用
 export {
@@ -16,6 +16,6 @@ export {
   VbenLoading,
   VbenPinInput,
   VbenSpinner,
-} from '@vben-core/shadcn-ui';
+} from '~/packages/@core/ui-kit/shadcn-ui';
 
-export { globalShareState } from '@vben-core/shared/global-state';
+export { globalShareState } from '~/packages/@core/base/shared/global-state';

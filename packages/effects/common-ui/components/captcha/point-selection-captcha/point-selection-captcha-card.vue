@@ -3,14 +3,14 @@ import type { PointSelectionCaptchaCardProps } from '../types';
 
 import { computed } from 'vue';
 
-import { $t } from '@vben/locales';
+import { $t } from '~/packages/locales';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@vben-core/shadcn-ui';
+} from '~/packages/@core/ui-kit/shadcn-ui';
 
 const props = withDefaults(defineProps<PointSelectionCaptchaCardProps>(), {
   height: '220px',

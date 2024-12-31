@@ -12,8 +12,8 @@ import {
   FormItem,
   FormMessage,
   VbenRenderContent,
-} from '@vben-core/shadcn-ui';
-import { cn, isFunction, isObject, isString } from '@vben-core/shared/utils';
+} from '~/packages/@core/ui-kit/shadcn-ui';
+import { cn, isFunction, isObject, isString } from '~/packages/@core/base/shared/utils';
 
 import { toTypedSchema } from '@vee-validate/zod';
 import { useFieldError, useFormValues } from 'vee-validate';

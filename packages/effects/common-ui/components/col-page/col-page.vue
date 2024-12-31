@@ -7,7 +7,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
-} from '@vben-core/shadcn-ui';
+} from '~/packages/@core/ui-kit/shadcn-ui';
 
 import Page from '../page/page.vue';
 

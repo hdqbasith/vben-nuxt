@@ -1,25 +1,26 @@
 <script lang="ts" setup>
-import type { NotificationItem } from '@vben/layouts';
+import type { NotificationItem } from '~/packages/effects/layouts';
 
 import { computed, ref, watch } from 'vue';
 
-import { AuthenticationLoginExpiredModal } from '@vben/common-ui';
-import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@vben/constants';
-import { useWatermark } from '@vben/hooks';
-import { BookOpenText, CircleHelp, MdiGithub } from '@vben/icons';
+import { AuthenticationLoginExpiredModal } from '~/packages/effects/common-ui';
+import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '~/packages/constants';
+import { useWatermark } from '~/packages/effects/hooks';
+import { BookOpenText, CircleHelp, MdiGithub } from '~/packages/icons';
 import {
   BasicLayout,
   LockScreen,
   Notification,
   UserDropdown,
-} from '@vben/layouts';
-import { preferences } from '@vben/preferences';
-import { useAccessStore, useUserStore } from '@vben/stores';
-import { openWindow } from '@vben/utils';
+} from '~/packages/effects/layouts';
+import { preferences } from '~/packages/preferences';
+import { useAccessStore, useUserStore } from '~/packages/stores';
+import { openWindow } from '~/packages/utils';
 
-import { $t } from '#/locales';
+
 import { useAuthStore } from '#/store';
-import LoginForm from '#/views/_core/authentication/login.vue';
+import LoginForm from '#/views/_core/authentica tion/login.vue';
+import { $t } from '~/packages/locales';
 
 const notifications = ref<NotificationItem[]>([
   {

@@ -1,4 +1,4 @@
-import type { BasicUserInfo } from '@vben-core/typings';
+import type { BasicUserInfo } from '~/packages/@core/base/typings';
 
 /** 用户信息 */
 interface UserInfo extends BasicUserInfo {

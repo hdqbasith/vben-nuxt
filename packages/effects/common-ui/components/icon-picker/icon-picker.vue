@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed, h, ref, type VNode, watch, watchEffect } from 'vue';
 
-import { usePagination } from '@vben/hooks';
-import { EmptyIcon, Grip, listIcons } from '@vben/icons';
-import { $t } from '@vben/locales';
+import { usePagination } from '~/packages/effects/hooks';
+import { EmptyIcon, Grip, listIcons } from '~/packages/icons';
+import { $t } from '~/packages/locales';
 import {
   Button,
   Pagination,
@@ -17,7 +17,7 @@ import {
   VbenIcon,
   VbenIconButton,
   VbenPopover,
-} from '@vben-core/shadcn-ui';
+} from '~/packages/@core/ui-kit/shadcn-ui';
 
 import { refDebounced } from '@vueuse/core';
 

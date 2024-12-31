@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ChevronDown } from '@vben-core/icons';
-import { cn } from '@vben-core/shared/utils';
+import { ChevronDown } from '~/packages/@core/base/icons';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 const props = defineProps<{
   class?: string;

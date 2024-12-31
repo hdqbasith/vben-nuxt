@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 const props = defineProps<{
   class?: any;

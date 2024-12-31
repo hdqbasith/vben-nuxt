@@ -3,6 +3,7 @@ import { computed } from 'vue';
 import { preferences } from '~/packages/@core/preferences';
 const appName = computed(() => preferences.app.name);
 const logo = computed(() => preferences.logo.source);
+import {AuthPageLayout} from './layouts'
 </script>
 
 <template>

@@ -7,8 +7,8 @@ import type {
 
 import { reactive, unref, useTemplateRef, watch, watchEffect } from 'vue';
 
-import { $t } from '@vben/locales';
-import { cn } from '@vben-core/shared/utils';
+import { $t } from '~/packages/locales';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 import { useTimeoutFn } from '@vueuse/core';
 

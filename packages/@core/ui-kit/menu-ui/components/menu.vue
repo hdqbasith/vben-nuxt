@@ -20,9 +20,9 @@ import {
   watchEffect,
 } from 'vue';
 
-import { useNamespace } from '@vben-core/composables';
-import { Ellipsis } from '@vben-core/icons';
-import { isHttpUrl } from '@vben-core/shared/utils';
+import { useNamespace } from '~/packages/@core/composables';
+import { Ellipsis } from '~/packages/@core/base/icons';
+import { isHttpUrl } from '~/packages/@core/base/shared/utils';
 
 import { useResizeObserver } from '@vueuse/core';
 

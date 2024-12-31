@@ -1,6 +1,6 @@
-import type { IconifyIconStructure } from '@vben-core/icons';
+import type { IconifyIconStructure } from '~/packages/@core/base/icons';
 
-import { addIcon } from '@vben-core/icons';
+import { addIcon } from '~/packages/@core/base/icons';
 
 let loaded = false;
 if (!loaded) {

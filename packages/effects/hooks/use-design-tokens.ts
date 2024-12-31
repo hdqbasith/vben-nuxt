@@ -1,7 +1,7 @@
 import { reactive, watch } from 'vue';
 
-import { preferences, usePreferences } from '@vben/preferences';
-import { convertToRgb, updateCSSVariables } from '@vben/utils';
+import { preferences, usePreferences } from '~/packages/preferences';
+import { convertToRgb, updateCSSVariables } from '~/packages/utils';
 
 /**
  * 用于适配各个框架的设计系统

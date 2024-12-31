@@ -2,8 +2,8 @@
 import type { CSSProperties } from 'vue';
 import { computed, ref, useTemplateRef } from 'vue';
 
-import { Check, ChevronsRight } from '@vben/icons';
-import { Slot } from '@vben-core/shadcn-ui';
+import { Check, ChevronsRight } from '~/packages/icons';
+import { Slot } from '~/packages/@core/ui-kit/shadcn-ui';
 
 const props = defineProps<{
   actionStyle: CSSProperties;

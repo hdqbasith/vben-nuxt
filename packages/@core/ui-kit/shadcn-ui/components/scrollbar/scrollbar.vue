@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { ClassType } from '@vben-core/typings';
+import type { ClassType } from '~/packages/@core/base/typings';
 
 import { computed, ref } from 'vue';
 
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 import { ScrollArea, ScrollBar } from '../../ui';
 

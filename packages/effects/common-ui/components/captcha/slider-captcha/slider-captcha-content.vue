@@ -2,7 +2,7 @@
 import type { CSSProperties } from 'vue';
 import { computed, useTemplateRef } from 'vue';
 
-import { VbenSpineText } from '@vben-core/shadcn-ui';
+import { VbenSpineText } from '~/packages/@core/ui-kit/shadcn-ui';
 
 const props = defineProps<{
   contentStyle: CSSProperties;

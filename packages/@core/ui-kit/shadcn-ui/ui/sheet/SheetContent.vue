@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 import {
   DialogContent,

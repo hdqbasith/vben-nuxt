@@ -10,8 +10,8 @@ import {
   useTemplateRef,
 } from 'vue';
 
-import { CSS_VARIABLE_LAYOUT_CONTENT_HEIGHT } from '@vben-core/shared/constants';
-import { cn } from '@vben-core/shared/utils';
+import { CSS_VARIABLE_LAYOUT_CONTENT_HEIGHT } from '~/packages/@core/base/shared/constants';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 defineOptions({
   name: 'Page',

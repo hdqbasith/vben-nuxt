@@ -3,7 +3,7 @@ import type { VariantProps } from 'class-variance-authority';
 
 import { computed, inject } from 'vue';
 
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 import {
   ToggleGroupItem,

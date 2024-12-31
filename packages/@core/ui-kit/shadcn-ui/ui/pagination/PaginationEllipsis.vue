@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 import { MoreHorizontal } from 'lucide-vue-next';
 import { PaginationEllipsis, type PaginationEllipsisProps } from 'radix-vue';

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { FormLabel, VbenHelpTooltip } from '@vben-core/shadcn-ui';
-import { cn } from '@vben-core/shared/utils';
+import { FormLabel, VbenHelpTooltip } from '~/packages/@core/ui-kit/shadcn-ui';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 interface Props {
   class?: string;

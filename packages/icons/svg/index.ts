@@ -1,4 +1,4 @@
-import { createIconifyIcon } from '@vben-core/icons';
+import { createIconifyIcon } from '~/packages/@core/base/icons';
 
 import './load.js';
 

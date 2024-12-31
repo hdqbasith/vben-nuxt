@@ -1,4 +1,4 @@
-import type { MenuRecordRaw } from '@vben-core/typings';
+import type { MenuRecordRaw } from '~/packages/@core/base/typings';
 import type { RouteRecordRaw } from 'vue-router';
 
 import { acceptHMRUpdate, defineStore } from 'pinia';

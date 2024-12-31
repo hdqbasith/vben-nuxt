@@ -3,8 +3,8 @@ import type { MenuItemProps, MenuItemRegistered } from '../types';
 
 import { computed, onBeforeUnmount, onMounted, reactive, useSlots } from 'vue';
 
-import { useNamespace } from '@vben-core/composables';
-import { VbenIcon, VbenTooltip } from '@vben-core/shadcn-ui';
+import { useNamespace } from '~/packages/@core/composables';
+import { VbenIcon, VbenTooltip } from '~/packages/@core/ui-kit/shadcn-ui';
 
 import { MenuBadge } from '../components';
 import { useMenu, useMenuContext, useSubMenuContext } from '../hooks';

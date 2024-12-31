@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { VbenFormProps } from '@vben-core/form-ui';
+import type { VbenFormProps } from '~/packages/@core/ui-kit/form-ui';
 import type {
   VxeGridDefines,
   VxeGridInstance,
@@ -22,12 +22,12 @@ import {
   watch,
 } from 'vue';
 
-import { usePriorityValues } from '@vben/hooks';
-import { EmptyIcon } from '@vben/icons';
-import { $t } from '@vben/locales';
-import { usePreferences } from '@vben/preferences';
-import { cloneDeep, cn, mergeWithArrayOverride } from '@vben/utils';
-import { VbenHelpTooltip, VbenLoading } from '@vben-core/shadcn-ui';
+import { usePriorityValues } from '~/packages/effects/hooks';
+import { EmptyIcon } from '~/packages/icons';
+import { $t } from '~/packages/locales';
+import { usePreferences } from '~/packages/preferences';
+import { cloneDeep, cn, mergeWithArrayOverride } from '~/packages/utils';
+import { VbenHelpTooltip, VbenLoading } from '~/packages/@core/ui-kit/shadcn-ui';
 
 import { VxeGrid, VxeUI } from 'vxe-table';
 

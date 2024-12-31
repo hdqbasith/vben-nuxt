@@ -9,7 +9,7 @@ import {
   CardTitle,
   VbenCountToAnimator,
   VbenIcon,
-} from '@vben-core/shadcn-ui';
+} from '~/packages/@core/ui-kit/shadcn-ui';
 
 interface Props {
   items: AnalysisOverviewItem[];

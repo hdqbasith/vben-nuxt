@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { ButtonVariants, ButtonVariantSize } from './types';
 
-import { cn } from '@vben-core/shared/utils';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 import { Primitive, type PrimitiveProps } from 'radix-vue';
 

@@ -2,8 +2,8 @@ import type { FormActions, VbenFormProps } from './types';
 
 import { computed, type ComputedRef, unref, useSlots } from 'vue';
 
-import { createContext } from '@vben-core/shadcn-ui';
-import { isString } from '@vben-core/shared/utils';
+import { createContext } from '~/packages/@core/ui-kit/shadcn-ui';
+import { isString } from '~/packages/@core/base/shared/utils';
 
 import { useForm } from 'vee-validate';
 import { object, type ZodRawShape } from 'zod';

@@ -3,9 +3,9 @@ import type { MenuItemProps } from '../types';
 
 import { computed } from 'vue';
 
-import { useNamespace } from '@vben-core/composables';
-import { ChevronDown, ChevronRight } from '@vben-core/icons';
-import { VbenIcon } from '@vben-core/shadcn-ui';
+import { useNamespace } from '~/packages/@core/composables';
+import { ChevronDown, ChevronRight } from '~/packages/@core/base/icons';
+import { VbenIcon } from '~/packages/@core/ui-kit/shadcn-ui';
 
 import { useMenuContext } from '../hooks';
 

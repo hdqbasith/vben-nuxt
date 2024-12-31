@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, type HTMLAttributes } from 'vue';
 
-import { GripVertical } from '@vben-core/icons';
-import { cn } from '@vben-core/shared/utils';
+import { GripVertical } from '~/packages/@core/base/icons';
+import { cn } from '~/packages/@core/base/shared/utils';
 
 import {
   SplitterResizeHandle,

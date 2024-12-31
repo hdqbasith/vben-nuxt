@@ -1,4 +1,4 @@
-import type { ClassType } from '@vben/types';
+import type { ClassType } from '~/packages/types';
 
 import type { CSSProperties } from 'vue';
 
