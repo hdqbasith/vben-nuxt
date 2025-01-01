@@ -191,10 +191,10 @@ class PreferenceManager {
    * 偏好设置将被重置为初始值，并从 localStorage 中移除。
    *
    * @example
-   * 假设 initialPreferences 为 { theme: 'light', language: 'en' }
+   * 假设 initialPreferences 为 { theme: 'light', language: 'en-US' }
    * 当前 state 为 { theme: 'dark', language: 'fr' }
    * this.resetPreferences();
-   * 调用后，state 将被重置为 { theme: 'light', language: 'en' }
+   * 调用后，state 将被重置为 { theme: 'light', language: 'en-US' }
    * 并且 localStorage 中的对应项将被移除
    */
   resetPreferences() {

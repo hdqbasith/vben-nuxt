@@ -564,7 +564,7 @@ const idMainContent = ELEMENT_ID_MAIN_CONTENT;
       </div>
 
       <!-- </div> -->
-      <LayoutContent
+      <!-- <LayoutContent
         :id="idMainContent"
         :content-compact="contentCompact"
         :content-compact-width="contentCompactWidth"
@@ -581,7 +581,7 @@ const idMainContent = ELEMENT_ID_MAIN_CONTENT;
         <template #overlay>
           <slot name="content-overlay"></slot>
         </template>
-      </LayoutContent>
+      </LayoutContent> -->
 
       <LayoutFooter
         v-if="footerEnable"

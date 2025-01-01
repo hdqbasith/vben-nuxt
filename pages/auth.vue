@@ -2,5 +2,6 @@
 
 </script>
 <template>
-    <LayoutsAuth/>
+    <NuxtLayout name='auth'>
+    </NuxtLayout>
 </template>

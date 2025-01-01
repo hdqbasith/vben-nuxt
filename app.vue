@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { Toaster } from 'vue-sonner';
@@ -18,7 +18,7 @@ dayjs.extend(customParseFormat)
 const app=useNuxtApp().vueApp
 const namespace='ndm'
 await setupI18n(app, {defaultLocale:'en-US'})
-await initStores(app, namespace)
+await initStores(app, {namespace})
 registerAccessDirective(app);
 useElementPlusDesignTokens();
 
@@ -27,12 +27,12 @@ useElementPlusDesignTokens();
   
   <!-- {{ JSON.stringify(auth) }}
   {{ tgl }} -->
-    <NuxtLayout>
+    <!-- <NuxtLayout> -->
       <!-- <ElConfigProvider :locale="elementLocale"> -->
 
         <NuxtPage />
-      <!-- </ElConfigProvider> -->
-    </NuxtLayout>
+      <!-- </ElConfigP/rovider> -->
+    <!-- </NuxtLayout> -->
     <NuxtLoadingIndicator class="!opacity-100" :throttle="0" />
     <Toaster richColors :expand="true" closeButton position="top-right"/>
 </template>
