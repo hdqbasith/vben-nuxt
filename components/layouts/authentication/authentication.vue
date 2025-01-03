@@ -94,11 +94,6 @@ const { authPanelCenter, authPanelLeft, authPanelRight, isDark } =
 
           <!-- 右侧认证面板 -->
           <NuxtPage v-if="authPanelRight" class="min-h-full w-[34%] flex-1">
-              <template v-if="copyright" #copyright>
-                  <slot name="copyright">
-                      <Copyright v-if="preferences.copyright.enable" v-bind="preferences.copyright" />
-                  </slot>
-              </template>
           </NuxtPage>
       </div>
   </NuxtLayout>

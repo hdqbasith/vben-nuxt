@@ -11,6 +11,11 @@ import { openWindow } from '~/packages/utils';
 import { $t } from '~/packages/locales';
 import { useAuthStore } from '~/stores/auth';
 import type { NotificationItem } from '../components/layouts/widgets';
+import { BasicLayout } from '~/components/layouts/basic';
+import UserDropdown from '~/components/layouts/widgets/user-dropdown/user-dropdown.vue';
+import Notification from '~/components/layouts/widgets/notification/notification.vue';
+import { AuthenticationLoginExpiredModal } from '~/packages/effects/common-ui';
+import LockScreen from '~/components/layouts/widgets/lock-screen/lock-screen.vue';
 
 const notifications = ref<NotificationItem[]>([
   {
@@ -138,7 +143,7 @@ watch(
         v-model:open="accessStore.loginExpired"
         :avatar
       >
-        <LoginForm />
+        <!-- <LoginForm /> -->
       </AuthenticationLoginExpiredModal>
     </template>
     <template #lock-screen>

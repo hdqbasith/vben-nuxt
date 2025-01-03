@@ -302,17 +302,17 @@ const headerSlots = computed(() => {
     </template>
 
     <template #tabbar>
-      <LayoutTabbar
+      <!-- <LayoutTabbar
         v-if="preferences.tabbar.enable"
         :show-icon="preferences.tabbar.showIcon"
         :theme="theme"
-      />
+      /> -->
     </template>
 
     <!-- 主体内容 -->
-    <!-- <template #content>
+    <template #content>
       <LayoutContent />
-    </template> -->
+    </template>
 
     <template v-if="preferences.transition.loading" #content-overlay>
       <LayoutContentSpinner />

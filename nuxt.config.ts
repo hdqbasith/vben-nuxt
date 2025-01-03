@@ -11,4 +11,9 @@ export default defineNuxtConfig({
   },
   css:['~/packages/@core/base/design/index.ts'],
   ssr: false,
+  typescript:{
+    tsConfig:{
+      include:["./packages/**/*.ts"]
+    }
+  }
 })

@@ -1,6 +1,5 @@
 <script setup>
-
 </script>
 <template>
-    <LayoutsAuth/>
+    <div>Success</div>
 </template>

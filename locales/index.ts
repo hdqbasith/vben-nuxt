@@ -1,19 +1,13 @@
-import type { LocaleSetupOptions, SupportedLanguagesType } from '@vben/locales';
 import type { Language } from 'element-plus/es/locale';
 
 import type { App } from 'vue';
 import { ref } from 'vue';
 
-import {
-  $t,
-  setupI18n as coreSetup,
-  loadLocalesMapFromDir,
-} from '@vben/locales';
-import { preferences } from '@vben/preferences';
-
 import dayjs from 'dayjs';
 import enLocale from 'element-plus/es/locale/lang/en';
 import defaultLocale from 'element-plus/es/locale/lang/zh-cn';
+import { loadLocalesMapFromDir, type LocaleSetupOptions, setupI18n as coreSetup } from '~/packages/locales';
+import { preferences, type SupportedLanguagesType } from '~/packages/preferences';
 
 const elementLocale = ref<Language>(defaultLocale);
 
@@ -97,4 +91,4 @@ async function setupI18n(app: App, options: LocaleSetupOptions = {}) {
   });
 }
 
-export { $t, elementLocale, setupI18n };
+export { elementLocale, setupI18n };

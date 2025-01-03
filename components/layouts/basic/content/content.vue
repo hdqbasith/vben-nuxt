@@ -88,8 +88,11 @@ function transformComponent(
 
 <template>
   <div class="relative h-full">
-    <IFrameRouterView />
-    <RouterView v-slot="{ Component, route }">
+    <!-- <Transition :name="getTransitionName()" appear mode="out-in"> -->
+      <NuxtPage/>
+    <!-- </Transition> -->
+    <!-- <IFrameRouterView /> -->
+    <!-- <RouterView v-slot="{ Component, route }">
       <Transition :name="getTransitionName(route)" appear mode="out-in">
         <KeepAlive
           v-if="keepAlive"
@@ -109,6 +112,6 @@ function transformComponent(
           :key="route.fullPath"
         />
       </Transition>
-    </RouterView>
+    </RouterView> -->
   </div>
 </template>
