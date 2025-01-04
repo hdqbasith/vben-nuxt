@@ -5,8 +5,8 @@ import { baseRequestClient, requestClient } from "../request";
 export namespace AuthApi {
   /** 登录接口参数 */
   export interface LoginParams {
+    email?: string;
     password?: string;
-    username?: string;
   }
 
   /** 登录接口返回值 */
@@ -25,11 +25,11 @@ export namespace AuthApi {
  */
 export async function loginApi(data: AuthApi.LoginParams) {
   // eslint-disable-next-line no-console
-  console.log(
-    JSON.stringify(
-      requestClient.post<AuthApi.LoginResult>('/auth/login', data),
-    ),
-  );
+  // console.log(
+  //   JSON.stringify(
+  //     requestClient.post<AuthApi.LoginResult>('/auth/login', data),
+  //   ),
+  // );  
   return requestClient.post<AuthApi.LoginResult>('/auth/login', data);
 }
 

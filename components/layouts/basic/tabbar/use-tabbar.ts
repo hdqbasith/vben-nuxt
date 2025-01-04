@@ -55,7 +55,7 @@ export function useTabbar() {
       () => locale.value,
     ],
     ([tabs]) => {
-      currentTabs.value = tabs.map((item) => wrapperTabLocale(item));
+      currentTabs.value = tabs.map((item) => wrapperTabLocale(item));      
     },
   );
 

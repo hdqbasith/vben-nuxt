@@ -56,7 +56,21 @@ export const useUserStore = defineStore('core-user', {
     userRoles: [],
   }),
 });
-
+// export const useUserStore = defineStore('core-user', () => {
+//   const userInfo=ref();
+//   const userRoles=ref();
+//   const setUserInfo=(user: BasicUserInfo | null) => {
+//     // 设置用户信息
+//     userInfo.value = user;
+//     // 设置角色信息
+//     const roles = userInfo.value?.roles ?? [];
+//     setUserRoles(roles);
+//   };
+//     const setUserRoles=(roles: string[])=> {
+//     userRoles.value = roles;
+//   };
+//   return{ setUserInfo, userInfo, userRoles }
+// });
 // 解决热更新问题
 const hot = import.meta.hot;
 if (hot) {

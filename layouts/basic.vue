@@ -16,7 +16,6 @@ import UserDropdown from '~/components/layouts/widgets/user-dropdown/user-dropdo
 import Notification from '~/components/layouts/widgets/notification/notification.vue';
 import { AuthenticationLoginExpiredModal } from '~/packages/effects/common-ui';
 import LockScreen from '~/components/layouts/widgets/lock-screen/lock-screen.vue';
-
 const notifications = ref<NotificationItem[]>([
   {
     avatar: 'https://avatar.vercel.sh/vercel.svg?text=VB',

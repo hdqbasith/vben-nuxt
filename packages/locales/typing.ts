@@ -1,4 +1,4 @@
-export type SupportedLanguagesType = 'en-US' | 'zh-CN';
+export type SupportedLanguagesType = 'en-US' | 'id-ID';
 
 export type ImportLocaleFn = () => Promise<{ default: Record<string, string> }>;
 
@@ -9,7 +9,7 @@ export type LoadMessageFn = (
 export interface LocaleSetupOptions {
   /**
    * Default language
-   * @default zh-CN
+   * @default id-ID
    */
   defaultLocale?: SupportedLanguagesType;
   /**

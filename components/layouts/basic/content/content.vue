@@ -5,12 +5,12 @@ import type {
 } from 'vue-router';
 
 import { type VNode } from 'vue';
-import { RouterView } from 'vue-router';
+// import { RouterView } from 'vue-router';
 
 import { preferences, usePreferences } from '~/packages/preferences';
 import { storeToRefs, useTabbarStore } from '~/packages/stores';
 
-import { IFrameRouterView } from '../../iframe';
+// import { IFrameRouterView } from '../../iframe';
 
 defineOptions({ name: 'LayoutContent' });
 
@@ -89,7 +89,7 @@ function transformComponent(
 <template>
   <div class="relative h-full">
     <!-- <Transition :name="getTransitionName()" appear mode="out-in"> -->
-      <NuxtPage/>
+      <NuxtPage class="p-5"/>
     <!-- </Transition> -->
     <!-- <IFrameRouterView /> -->
     <!-- <RouterView v-slot="{ Component, route }">

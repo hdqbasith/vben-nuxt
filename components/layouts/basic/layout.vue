@@ -273,7 +273,7 @@ const headerSlots = computed(() => {
       />
     </template>
     <template #mixed-menu>
-      <LayoutMixedMenu
+      <!-- <LayoutMixedMenu
         :active-path="extraActiveMenu"
         :menus="wrapperMenus(mixHeaderMenus, false)"
         :rounded="isMenuRounded"
@@ -281,17 +281,17 @@ const headerSlots = computed(() => {
         @default-select="handleDefaultSelect"
         @enter="handleMenuMouseEnter"
         @select="handleMixedMenuSelect"
-      />
+      /> -->
     </template>
     <!-- 侧边额外区域 -->
     <template #side-extra>
-      <LayoutExtraMenu
+      <!-- <LayoutExtraMenu
         :accordion="preferences.navigation.accordion"
         :collapse="preferences.sidebar.extraCollapse"
         :menus="wrapperMenus(extraMenus)"
         :rounded="isMenuRounded"
         :theme="sidebarTheme"
-      />
+      /> -->
     </template>
     <template #side-extra-title>
       <VbenLogo
@@ -302,11 +302,11 @@ const headerSlots = computed(() => {
     </template>
 
     <template #tabbar>
-      <!-- <LayoutTabbar
+      <LayoutTabbar
         v-if="preferences.tabbar.enable"
         :show-icon="preferences.tabbar.showIcon"
         :theme="theme"
-      /> -->
+      />
     </template>
 
     <!-- 主体内容 -->

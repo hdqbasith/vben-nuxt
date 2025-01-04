@@ -1,15 +1,8 @@
-import type { Language } from 'element-plus/es/locale';
-
 import type { App } from 'vue';
-import { ref } from 'vue';
 
 import dayjs from 'dayjs';
-import enLocale from 'element-plus/es/locale/lang/en';
-import defaultLocale from 'element-plus/es/locale/lang/zh-cn';
 import { loadLocalesMapFromDir, type LocaleSetupOptions, setupI18n as coreSetup } from '~/packages/locales';
 import { preferences, type SupportedLanguagesType } from '~/packages/preferences';
-
-const elementLocale = ref<Language>(defaultLocale);
 
 const modules = import.meta.glob('./langs/**/*.json');
 
@@ -35,7 +28,7 @@ async function loadMessages(lang: SupportedLanguagesType) {
  * @param lang
  */
 async function loadThirdPartyMessage(lang: SupportedLanguagesType) {
-  await Promise.all([loadElementLocale(lang), loadDayjsLocale(lang)]);
+  await Promise.all([loadDayjsLocale(lang)]);
 }
 
 /**
@@ -49,8 +42,8 @@ async function loadDayjsLocale(lang: SupportedLanguagesType) {
       locale = await import('dayjs/locale/en');
       break;
     }
-    case 'zh-CN': {
-      locale = await import('dayjs/locale/zh-cn');
+    case 'id-ID': {
+      locale = await import('dayjs/locale/id');
       break;
     }
     // 默认使用英语
@@ -65,23 +58,6 @@ async function loadDayjsLocale(lang: SupportedLanguagesType) {
   }
 }
 
-/**
- * 加载element-plus的语言包
- * @param lang
- */
-async function loadElementLocale(lang: SupportedLanguagesType) {
-  switch (lang) {
-    case 'en-US': {
-      elementLocale.value = enLocale;
-      break;
-    }
-    case 'zh-CN': {
-      elementLocale.value = defaultLocale;
-      break;
-    }
-  }
-}
-
 async function setupI18n(app: App, options: LocaleSetupOptions = {}) {
   await coreSetup(app, {
     defaultLocale: preferences.app.locale,
@@ -91,4 +67,4 @@ async function setupI18n(app: App, options: LocaleSetupOptions = {}) {
   });
 }
 
-export { elementLocale, setupI18n };
+export { setupI18n };

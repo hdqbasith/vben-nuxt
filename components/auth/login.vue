@@ -63,15 +63,15 @@ const formSchema = computed((): VbenFormSchema[] => {
             );
             if (findUser) {
               form.setValues({
+                email: findUser.value,
                 password: '123456',
-                username: findUser.value,
               });
             }
           }
         },
         triggerFields: ['selectAccount'],
       },
-      fieldName: 'username',
+      fieldName: 'email',
       label: $t('authentication.username'),
       rules: z.string().min(1, { message: $t('authentication.usernameTip') }),
     },
@@ -99,6 +99,5 @@ const formSchema = computed((): VbenFormSchema[] => {
   <Login
     :form-schema="formSchema"
     :loading="authStore.loginLoading"
-    @submit="authStore.authLogin"
   />
 </template>

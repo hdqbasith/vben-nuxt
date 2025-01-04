@@ -1,4 +1,4 @@
-export type Locale = 'en-US' | 'zh-CN';
+export type Locale = 'en-US' | 'id-ID';
 
 export const messages: Record<Locale, Record<string, string>> = {
   'en-US': {
@@ -9,7 +9,7 @@ export const messages: Record<Locale, Record<string, string>> = {
     reset: 'Reset',
     submit: 'Submit',
   },
-  'zh-CN': {
+  'id-ID': {
     cancel: '取消',
     collapse: '收起',
     confirm: '确认',

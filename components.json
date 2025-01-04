@@ -12,7 +12,7 @@
   },
   "framework": "nuxt",
   "aliases": {
-    "components": "@/components/ui",
-    "utils": "@/lib/utils"
+    "components": "~/packages/@core/ui-kit/shadcn-ui/ui",
+    "utils": "~/lib/utils"
   }
 }

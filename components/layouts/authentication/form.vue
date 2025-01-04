@@ -22,8 +22,9 @@ defineOptions({
       </Transition>
     </RouterView> -->
 
-    <!-- Footer Copyright -->
+    <NuxtPage :transition="{appear:true,mode:'out-in',name:'slide-right'}" :page-key="route => route.fullPath"/>
 
+    <!-- Footer Copyright -->
     <div
       class="text-muted-foreground absolute bottom-3 flex text-center text-xs"
     >

@@ -1,0 +1,29 @@
+{
+  "component": "BasicLayout",
+  "meta": {
+    "order": -1,
+    "title": "page.dashboard.title"
+  },
+  "name": "Beranda",
+  "path": "/",
+  "redirect": "/admin",
+  "children": [
+    {
+      "name": "Ringkasan",
+      "path": "/home",
+      "component": "/admin/home",
+      "meta": {
+        "affixTab": true,
+        "title": "Ringkasan"
+      }
+    },
+    {
+      "name": "Applicants",
+      "path": "/applicants",
+      "component": "/admin/applicants",
+      "meta": {
+        "title": "Applicants"
+      }
+    }
+  ]
+}

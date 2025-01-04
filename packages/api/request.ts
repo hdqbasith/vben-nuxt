@@ -22,7 +22,7 @@ import { useAccessStore } from '../stores';
 import { refreshTokenApi } from './core';
 import { preferences } from '../preferences';
 
-const apiURL = '';
+const apiURL = useRuntimeConfig().public.apiBase + useRuntimeConfig().public.apiPrefix;
 
 function createRequestClient(baseURL: string) {
   const client = new RequestClient({

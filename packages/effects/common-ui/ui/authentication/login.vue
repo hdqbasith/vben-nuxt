@@ -13,6 +13,7 @@ import { VbenButton, VbenCheckbox } from '~/packages/@core/ui-kit/shadcn-ui';
 
 import Title from './auth-title.vue';
 import ThirdPartyLogin from './third-party-login.vue';
+import { useAuthStore } from '~/stores/auth';
 
 interface Props extends AuthenticationProps {
   formSchema: VbenFormSchema[];
@@ -62,6 +63,7 @@ const localUsername = localStorage.getItem(REMEMBER_ME_KEY) || '';
 
 const rememberMe = ref(!!localUsername);
 
+const authstore=useAuthStore()
 async function handleSubmit() {
   const { valid } = await formApi.validate();
   const values = await formApi.getValues();
@@ -70,7 +72,8 @@ async function handleSubmit() {
       REMEMBER_ME_KEY,
       rememberMe.value ? values?.username : '',
     );
-    emit('submit', values);
+    // emit('submit', values);
+    await authstore.authLogin(values)
   }
 }
 

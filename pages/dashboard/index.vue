@@ -1,5 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+definePageMeta({
+     title:'Home Index',
+     affixTab:false
+})
+</script>
 <template>
-    <!-- <div>{{ useNuxtApp().$router.getRoutes() }}</div> -->
-     <div>OK jbnb</div>
+     <LandingFeaturesSection/>
 </template>

@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": 0,
+    "realName": "hdqbasith",
+    "password": "pa$5word",
+    "roles": { "0": "super" },
+    "username": "huda"
+  },
+  "code": 0,
+  "error": null,
+  "message": "ok"
+}

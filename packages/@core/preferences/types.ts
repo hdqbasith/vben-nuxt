@@ -16,7 +16,7 @@ import type {
   ThemeModeType,
 } from '~/packages/@core/base/typings';
 
-type SupportedLanguagesType = 'en-US' | 'zh-CN';
+type SupportedLanguagesType = 'en-US' | 'id-ID';
 
 interface AppPreferences {
   /** 权限模式 */

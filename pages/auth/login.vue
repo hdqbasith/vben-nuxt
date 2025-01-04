@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import { i18n } from '~/packages/locales';
+
+definePageMeta({
+    hideInTab:true,
+    title: 'login'
+})
 
 </script>
 <template>

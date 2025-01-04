@@ -6,6 +6,7 @@ import { preferences, usePreferences } from '~/packages/preferences';
 import { Copyright } from '../basic/copyright';
 import SloganIcon from './icons/slogan.vue';
 import Toolbar from './toolbar.vue';
+import AuthenticationFormView from './form.vue';
 
 interface Props {
   appName?: string;
@@ -34,7 +35,6 @@ const { authPanelCenter, authPanelLeft, authPanelRight, isDark } =
 </script>
 
 <template>
-  <NuxtLayout>
       <div :class="[isDark]" class="flex min-h-full flex-1 select-none overflow-x-hidden">
           <template v-if="toolbar">
               <slot name="toolbar">
@@ -42,13 +42,13 @@ const { authPanelCenter, authPanelLeft, authPanelRight, isDark } =
               </slot>
           </template>
           <!-- 左侧认证面板 -->
-          <NuxtPage v-if="authPanelLeft" class="min-h-full w-2/5 flex-1" transition-name="slide-left">
+          <AuthenticationFormView v-if="authPanelLeft" class="min-h-full w-2/5 flex-1" transition-name="slide-left">
               <template v-if="copyright" #copyright>
                   <slot name="copyright">
                       <Copyright v-if="preferences.copyright.enable" v-bind="preferences.copyright" />
                   </slot>
               </template>
-          </NuxtPage>
+          </AuthenticationFormView>
 
           <!-- 头部 Logo 和应用名称 -->
           <div v-if="logo || appName" class="absolute left-0 top-0 z-10 flex flex-1">
@@ -82,21 +82,20 @@ const { authPanelCenter, authPanelLeft, authPanelRight, isDark } =
           <!-- 中心认证面板 -->
           <div v-if="authPanelCenter" class="flex-center relative w-full">
               <div class="login-background absolute left-0 top-0 size-full"></div>
-              <NuxtPage
+              <AuthenticationFormView
                   class="md:bg-background shadow-primary/5 shadow-float w-full rounded-3xl pb-20 md:w-2/3 lg:w-1/2 xl:w-[36%]">
                   <template v-if="copyright" #copyright>
                       <slot name="copyright">
                           <Copyright v-if="preferences.copyright.enable" v-bind="preferences.copyright" />
                       </slot>
                   </template>
-              </NuxtPage>
+              </AuthenticationFormView>
           </div>
 
           <!-- 右侧认证面板 -->
-          <NuxtPage v-if="authPanelRight" class="min-h-full w-[34%] flex-1">
-          </NuxtPage>
+          <AuthenticationFormView v-if="authPanelRight" class="min-h-full w-[34%] flex-1">
+          </AuthenticationFormView>
       </div>
-  </NuxtLayout>
 </template>
 
 <style scoped>
