@@ -19,15 +19,12 @@ import { getAllMenusApi } from "../api";
 // import { BasicLayout, IFrameView } from '#/layouts';
 // import { $t } from '#/locales';
 
-// const forbiddenComponent = () => import('#/views/_core/fallback/forbidden.vue');
+const forbiddenComponent = () => import('~/components/fallback/forbidden.vue');
 
 async function generateAccess(options: GenerateMenuAndRoutesOptions) {
-  const pageMap: ComponentRecordType = import.meta.glob('../views/**/*.vue');
+  const pageMap: ComponentRecordType = import.meta.glob('~/pages/**/*.vue');
 
-  // const layoutMap: ComponentRecordType = {
-  //   BasicLayout,
-  //   IFrameView,
-  // };
+  const layoutMap: ComponentRecordType = import.meta.glob('~/layouts/*.vue');
 
   return await generateAccessible(preferences.app.accessMode, {
     ...options,
@@ -39,9 +36,9 @@ async function generateAccess(options: GenerateMenuAndRoutesOptions) {
       return await getAllMenusApi();
     },
     // 可以指定没有权限跳转403页面
-    // forbiddenComponent,
+    forbiddenComponent,
     // 如果 route.meta.menuVisibleWithForbidden = true
-    // layoutMap,
+    layoutMap,
     pageMap,
   });
 }

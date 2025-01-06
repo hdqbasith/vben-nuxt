@@ -1,29 +1,31 @@
-{
-  "component": "BasicLayout",
-  "meta": {
-    "order": -1,
-    "title": "page.dashboard.title"
-  },
-  "name": "Beranda",
-  "path": "/",
-  "redirect": "/admin",
-  "children": [
-    {
-      "name": "Ringkasan",
-      "path": "/home",
-      "component": "/admin/home",
+[
+  {
+      "component": "basic",
       "meta": {
-        "affixTab": true,
-        "title": "Ringkasan"
-      }
-    },
-    {
-      "name": "Applicants",
-      "path": "/applicants",
-      "component": "/admin/applicants",
-      "meta": {
-        "title": "Applicants"
-      }
-    }
-  ]
-}
+          "order": -1,
+          "title": "page.dashboard.title"
+      },
+      "name": "Beranda",
+      "path": "/",
+      "redirect": "/dashboard",
+      "children": [
+          {
+              "name": "Ringkasan",
+              "path": "/home",
+              "redirect": "/dashboard/admin",
+              "meta": {
+                  "affixTab": true,
+                  "title": "Ringkasan"
+              }
+          },
+          {
+              "name": "Applicants",
+              "path": "/auth/login",
+              "redirect": "/auth/login",
+              "meta": {
+                  "title": "Applicants"
+              }
+          }
+      ]
+  }
+]

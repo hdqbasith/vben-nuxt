@@ -28,7 +28,7 @@ async function generateRoutesByBackend(
     }
 
     const routes = convertRoutes(menuRoutes, layoutMap, normalizePageMap);
-
+    
     return routes;
   } catch (error) {
     console.error(error);
@@ -42,6 +42,7 @@ function convertRoutes(
   pageMap: ComponentRecordType,
 ): RouteRecordRaw[] {
   return mapTree(routes, (node) => {
+    console.log(pageMap);
     const route = node as unknown as RouteRecordRaw;
     const { component, name } = node;
 
@@ -52,6 +53,7 @@ function convertRoutes(
     // layout转换
     if (component && layoutMap[component]) {
       route.component = layoutMap[component];
+      
       // 页面组件转换
     } else if (component) {
       const normalizePath = normalizeViewPath(component);

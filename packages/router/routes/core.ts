@@ -44,9 +44,9 @@ const coreRoutes: RouteRecordRaw[] = [
     redirect: LOGIN_PATH,
     children: [
       {
+        component: Login,
         name: 'Login',
         path: 'login',
-        component: Login,
         meta: {
           title: $t('page.auth.login'),
         },

@@ -1,10 +1,13 @@
 <script setup lang="ts">
-
 definePageMeta({
      title:'authentication.home',
-     affixTab:false
+     affixTab:false,
+     name:'admin',
+    middleware:'guard'
 })
 </script>
 <template>
-     <LandingFeaturesSection/>
+    <div>
+        OK
+    </div>
 </template>
