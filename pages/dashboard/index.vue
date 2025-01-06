@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 definePageMeta({
-     title:'Home Index',
+     // title:'authentication.home',
      affixTab:false
 })
 </script>

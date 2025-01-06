@@ -56,6 +56,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
         // 生成路由表
         // 当前登录用户拥有的角色标识列表
         const userInfo = userStore.userInfo || (await authStore.fetchUserInfo());
+        
         const userRoles = userInfo.roles ?? [];
 
         // 生成菜单和路由
@@ -65,7 +66,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
             // 则会在菜单中显示，但是访问会被重定向到403
             routes: accessRoutes,
         });
-
+        
         // 保存菜单信息和路由信息
         accessStore.setAccessMenus(accessibleMenus);
         accessStore.setAccessRoutes(accessibleRoutes);
@@ -74,7 +75,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
             (to.path === DEFAULT_HOME_PATH
                 ? userInfo.homePath || DEFAULT_HOME_PATH
                 : to.fullPath)) as string;
-
         return {
             ...router.resolve(decodeURIComponent(redirectPath)),
             replace: true,

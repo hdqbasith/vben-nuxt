@@ -58,6 +58,7 @@ export function useTabbar() {
       currentTabs.value = tabs.map((item) => wrapperTabLocale(item));      
     },
   );
+console.log(tabbarStore.getTabs.values);
 
   /**
    * 初始化固定标签页
@@ -80,10 +81,13 @@ export function useTabbar() {
   };
 
   function wrapperTabLocale(tab: RouteLocationNormalizedGeneric) {
+    // console.log(tab?.meta?.title as string);
+    
     return {
       ...tab,
       meta: {
         ...tab?.meta,
+        // title:tab?.meta?.title as string
         title: $t(tab?.meta?.title as string),
       },
     };

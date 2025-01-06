@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
     name: 'Home',
-    affixTab: true,
+    affixTab: false,
     title: 'home',
     middleware:'guard'
 })
