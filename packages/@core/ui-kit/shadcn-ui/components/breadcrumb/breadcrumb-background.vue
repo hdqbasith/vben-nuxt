@@ -26,7 +26,7 @@ function handleClick(index: number, path?: string) {
       >
         <li>
           <a
-            href="javascript:void 0"
+            class="cursor-pointer"
             @click.stop="handleClick(index, item.path)"
           >
             <span class="flex-center z-10 h-full">

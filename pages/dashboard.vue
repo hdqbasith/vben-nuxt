@@ -1,12 +1,12 @@
 <script setup lang="ts">
+
 definePageMeta({
-    name: 'Home',
-    affixTab: false,
     title: 'home',
-    middleware:'guard'
+    middleware:'basic'
 })
 </script>
 <template>
     <NuxtLayout name='basic'>
+        <NuxtPage></NuxtPage>
     </NuxtLayout>
 </template>

@@ -33,15 +33,15 @@ const breadcrumbs = computed((): IBreadcrumb[] => {
     const { meta, path } = match;
     const { hideChildrenInMenu, hideInBreadcrumb, icon, name, title } =
       meta || {};
-    if (hideInBreadcrumb || hideChildrenInMenu || !path) {
+    if (hideInBreadcrumb || hideChildrenInMenu || !path || !match.name) {
       continue;
     }
-
     resultBreadcrumb.push({
       icon,
       path: path || route.path,
       title: title ? $t((title || name) as string) : '',
     });
+
   }
   if (props.showHome) {
     resultBreadcrumb.unshift({
@@ -62,11 +62,6 @@ function handleSelect(path: string) {
 }
 </script>
 <template>
-  <VbenBreadcrumbView
-    :breadcrumbs="breadcrumbs"
-    :show-icon="showIcon"
-    :style-type="type"
-    class="ml-2"
-    @select="handleSelect"
-  />
+  <VbenBreadcrumbView :breadcrumbs="breadcrumbs" :show-icon="showIcon" :style-type="type" class="ml-2"
+    @select="handleSelect" />
 </template>

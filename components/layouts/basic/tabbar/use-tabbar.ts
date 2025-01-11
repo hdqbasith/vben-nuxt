@@ -19,7 +19,7 @@ import {
   RotateCw,
   X,
 } from '~/packages/icons';
-import { $t, useI18n } from '~/packages/locales';
+import { $t, i18n, useI18n } from '~/packages/locales';
 import { useAccessStore, useTabbarStore } from '~/packages/stores';
 import { filterTree } from '~/packages/utils';
 
@@ -55,10 +55,10 @@ export function useTabbar() {
       () => locale.value,
     ],
     ([tabs]) => {
-      currentTabs.value = tabs.map((item) => wrapperTabLocale(item));      
+      currentTabs.value = tabs.map((item) => wrapperTabLocale(item));
     },
   );
-console.log(tabbarStore.getTabs.values);
+  // console.log(tabbarStore.getTabs.values);
 
   /**
    * 初始化固定标签页
@@ -82,13 +82,13 @@ console.log(tabbarStore.getTabs.values);
 
   function wrapperTabLocale(tab: RouteLocationNormalizedGeneric) {
     // console.log(tab?.meta?.title as string);
-    
+
     return {
       ...tab,
       meta: {
         ...tab?.meta,
         // title:tab?.meta?.title as string
-        title: $t(tab?.meta?.title as string),
+        title: i18n.global.te(tab?.meta?.title as string)? $t(tab?.meta?.title as string):(tab?.meta?.title as string),
       },
     };
   }
@@ -105,10 +105,12 @@ console.log(tabbarStore.getTabs.values);
     () => route.path,
     () => {
       const meta = route.matched?.[route.matched.length - 1]?.meta;
-      tabbarStore.addTab({
-        ...route,
-        meta: meta || route.meta,
-      });
+      if (route.name) {
+        tabbarStore.addTab({
+          ...route,
+          meta: meta || route.meta,
+        });
+      }
     },
     { immediate: true },
   );

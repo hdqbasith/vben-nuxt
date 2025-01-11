@@ -6,7 +6,7 @@ import { useWatermark } from '~/packages/effects/hooks';
 import { BookOpenText, CircleHelp, MdiGithub } from '~/packages/icons';
 import { preferences } from '~/packages/preferences';
 import { useAccessStore, useUserStore } from '~/packages/stores';
-import { openWindow } from '~/packages/utils';
+import { generateMenus, openWindow } from '~/packages/utils';
 
 import { $t } from '~/packages/locales';
 import { useAuthStore } from '~/stores/auth';
@@ -16,6 +16,9 @@ import UserDropdown from '~/components/layouts/widgets/user-dropdown/user-dropdo
 import Notification from '~/components/layouts/widgets/notification/notification.vue';
 import { AuthenticationLoginExpiredModal } from '~/packages/effects/common-ui';
 import LockScreen from '~/components/layouts/widgets/lock-screen/lock-screen.vue';
+import { registerAccessDirective } from '~/packages/effects/access';
+import { createRouterGuard } from '~/packages/router/guard';
+
 const notifications = ref<NotificationItem[]>([
   {
     avatar: 'https://avatar.vercel.sh/vercel.svg?text=VB',
@@ -50,6 +53,12 @@ const notifications = ref<NotificationItem[]>([
 const userStore = useUserStore();
 const authStore = useAuthStore();
 const accessStore = useAccessStore();
+if(!accessStore.isReady){
+  registerAccessDirective(useNuxtApp().vueApp)
+  accessStore.setIsReady()
+
+}
+
 const { destroyWatermark, updateWatermark } = useWatermark();
 const showDot = computed(() =>
   notifications.value.some((item) => !item.isRead),
@@ -120,28 +129,15 @@ watch(
 <template>
   <BasicLayout @clear-preferences-and-logout="handleLogout">
     <template #user-dropdown>
-      <UserDropdown
-        :avatar
-        :menus
-        :text="userStore.userInfo?.realName"
-        description="ann.vben@gmail.com"
-        tag-text="Pro"
-        @logout="handleLogout"
-      />
+      <UserDropdown :avatar :menus :text="userStore.userInfo?.realName" description="ann.vben@gmail.com" tag-text="Pro"
+        @logout="handleLogout" />
     </template>
     <template #notification>
-      <Notification
-        :dot="showDot"
-        :notifications="notifications"
-        @clear="handleNoticeClear"
-        @make-all="handleMakeAll"
-      />
+      <Notification :dot="showDot" :notifications="notifications" @clear="handleNoticeClear"
+        @make-all="handleMakeAll" />
     </template>
     <template #extra>
-      <AuthenticationLoginExpiredModal
-        v-model:open="accessStore.loginExpired"
-        :avatar
-      >
+      <AuthenticationLoginExpiredModal v-model:open="accessStore.loginExpired" :avatar>
         <!-- <LoginForm /> -->
       </AuthenticationLoginExpiredModal>
     </template>

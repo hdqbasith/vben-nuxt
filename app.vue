@@ -4,7 +4,6 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 import { Toaster } from 'vue-sonner';
 import { setupI18n } from './locales';
 import { defineOverridesPreferences, initPreferences } from './packages/preferences';
-// import { setupI18n } from './locales';
 
 dayjs.extend(customParseFormat);
 const app = useNuxtApp().vueApp;
@@ -13,9 +12,19 @@ const namespace = 'nidhoma';
 await initPreferences({
   namespace,
   overrides: defineOverridesPreferences({
-    app:{
-      name:'nidhoma'
-    }
+    app: {
+      name: 'Nidhoma',
+      accessMode:'backend'
+    },
+    breadcrumb:{
+      showHome:true,
+      styleType:'background'
+    },
+    copyright:{
+      companyName:'HDQ Basith Studio',
+      companySiteLink:'https://hdqbasith.blogspot.com',
+      date:'2025',
+    },
   }),
 });
 </script>

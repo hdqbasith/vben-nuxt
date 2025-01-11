@@ -1,13 +1,14 @@
 <script setup lang="ts">
+
 definePageMeta({
-     title:'authentication.home',
-     affixTab:false,
-     name:'admin',
+    name:'Applicant',
+    title: 'Applicant',
     middleware:'basic'
 })
 </script>
 <template>
     <div>
-        OK
+        <NuxtLayout name='basic'>
+        </NuxtLayout>
     </div>
 </template>

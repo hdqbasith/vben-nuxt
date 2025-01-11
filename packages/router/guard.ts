@@ -45,12 +45,13 @@ function setupCommonGuard(router: Router) {
       stopProgress();
     }
   });
+  
 }
 
 /**
  * 权限访问守卫配置
  * @param router
- */
+*/
 function setupAccessGuard(router: Router) {
   router.beforeEach(async (to, from) => {
     const accessStore = useAccessStore();
@@ -133,6 +134,7 @@ function setupAccessGuard(router: Router) {
 function createRouterGuard(router: Router) {
   /** 通用 */
   setupCommonGuard(router);
+  
   /** 权限访问 */
   setupAccessGuard(router);
 }

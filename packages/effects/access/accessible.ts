@@ -1,3 +1,4 @@
+import NotFound from '~/components/fallback/not-found.vue';
 import type {
   AccessModeType,
   GenerateMenuAndRoutesOptions,
@@ -17,16 +18,22 @@ async function generateAccessible(
   options: GenerateMenuAndRoutesOptions,
 ) {
   const { router } = options;
+// console.log(router.getRoutes());
 
   options.routes = cloneDeep(options.routes);
   // 生成路由
+  
   const accessibleRoutes = await generateRoutes(mode, options);
 
   // 动态添加到router实例内
-  accessibleRoutes.forEach((route) => {
-    router.addRoute(route);
-  });
-
+  // accessibleRoutes.forEach((route) => {
+  //   router.addRoute(route);
+  // });
+  // const nuxroute=useRouter().getRoutes()
+  // nuxroute.forEach((route)=>{
+  //   router.addRoute(route)
+  // })
+  router.addRoute({ path: '/:pathMatch(.*)*', component: NotFound },)
   // 生成菜单
   const accessibleMenus = await generateMenus(accessibleRoutes, options.router);
 

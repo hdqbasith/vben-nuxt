@@ -26,7 +26,6 @@ async function generateRoutesByBackend(
     for (const [key, value] of Object.entries(pageMap)) {
       normalizePageMap[normalizeViewPath(key)] = value;
     }
-
     const routes = convertRoutes(menuRoutes, layoutMap, normalizePageMap);
     
     return routes;
@@ -42,7 +41,6 @@ function convertRoutes(
   pageMap: ComponentRecordType,
 ): RouteRecordRaw[] {
   return mapTree(routes, (node) => {
-    console.log(pageMap);
     const route = node as unknown as RouteRecordRaw;
     const { component, name } = node;
 
@@ -64,7 +62,6 @@ function convertRoutes(
             : `${normalizePath}.vue`
         ];
     }
-
     return route;
   });
 }

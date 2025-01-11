@@ -34,6 +34,7 @@ interface AccessState {
    * 登录 accessToken
    */
   refreshToken: AccessToken;
+  isReady: boolean
 }
 
 /**
@@ -81,6 +82,9 @@ export const useAccessStore = defineStore('core-access', {
     setRefreshToken(token: AccessToken) {
       this.refreshToken = token;
     },
+    setIsReady() {
+      this.isReady = true;
+    }
   },
   persist: {
     // 持久化
@@ -94,6 +98,7 @@ export const useAccessStore = defineStore('core-access', {
     isAccessChecked: false,
     loginExpired: false,
     refreshToken: null,
+    isReady: false
   }),
 });
 

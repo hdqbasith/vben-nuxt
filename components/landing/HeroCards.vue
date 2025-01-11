@@ -14,7 +14,7 @@ import { Avatar, AvatarFallback, AvatarImage, Badge, Button, Card, CardContent, 
         <Avatar>
           <AvatarImage
             alt=""
-            src="https://github.com/shadcn.png"
+            src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp"
           />
           <AvatarFallback>SH</AvatarFallback>
         </Avatar>
